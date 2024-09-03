@@ -1,0 +1,106 @@
+<div class="container">
+    <section>
+        <h2>1. Como criar uma conta no GitHub?</h2>
+        <ol>
+            <li>Acesse o site do GitHub: Vá para <a href="https://github.com" target="_blank">github.com</a>.</li>
+            <li>Clique em "Sign up" (Inscrever-se).</li>
+            <li>Preencha o formulário de inscrição:
+                <ul>
+                    <li><strong>Username</strong>: Escolha um nome de usuário único.</li>
+                    <li><strong>Email</strong>: Insira seu endereço de e-mail.</li>
+                    <li><strong>Password</strong>: Crie uma senha forte.</li>
+                </ul>
+            </li>
+            <li>Verifique seu e-mail: O GitHub enviará um e-mail para o endereço fornecido. Abra o e-mail e clique no link de verificação.</li>
+            <li>Complete a configuração: Após a verificação, você pode ser solicitado a configurar algumas preferências iniciais, como a escolha de um plano (o plano gratuito é suficiente para a maioria dos usuários iniciantes).</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>2. Quais são os primeiros passos após a criação da conta no GitHub?</h2>
+        <ol>
+            <li>Complete seu perfil:
+                <ul>
+                    <li>Vá para as configurações do perfil e adicione uma foto e uma breve descrição para tornar seu perfil mais completo.</li>
+                </ul>
+            </li>
+            <li>Crie um novo repositório:
+                <ul>
+                    <li>Clique no botão "New repository" (Novo repositório) na sua página inicial do GitHub.</li>
+                    <li>Dê um nome ao repositório, escolha se será público ou privado e, opcionalmente, adicione um arquivo README.</li>
+                </ul>
+            </li>
+            <li>Explore e siga outros repositórios e desenvolvedores:
+                <ul>
+                    <li>Navegue por projetos e siga desenvolvedores para ficar atualizado sobre novos projetos e boas práticas.</li>
+                </ul>
+            </li>
+            <li>Configure as notificações:
+                <ul>
+                    <li>Ajuste suas configurações de notificação para não perder atualizações importantes de seus repositórios e projetos que você está seguindo.</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>3. Como configurar o Git no seu computador local para se conectar ao GitHub?</h2>
+        <ol>
+            <li>Instale o Git:
+                <ul>
+                    <li><strong>Windows</strong>: Baixe o instalador do <a href="https://git-scm.com/download/win" target="_blank">site oficial do Git</a> e siga as instruções.</li>
+                    <li><strong>Mac</strong>: Você pode instalar o Git usando Homebrew com o comando <code>brew install git</code>, ou baixar o instalador do <a href="https://git-scm.com/download/mac" target="_blank">site oficial</a>.</li>
+                    <li><strong>Linux</strong>: Use o gerenciador de pacotes da sua distribuição, por exemplo, <code>sudo apt-get install git</code> para distribuições baseadas em Debian/Ubuntu.</li>
+                </ul>
+            </li>
+            <li>Configure suas informações de usuário:
+                <pre>
+<code>
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@example.com"
+</code>
+                </pre>
+            </li>
+            <li>Gerar uma chave SSH:
+                <pre>
+<code>
+ssh-keygen -t rsa -b 4096 -C "seuemail@example.com"
+</code>
+                </pre>
+                <ul>
+                    <li>Pressione Enter para aceitar o local padrão e defina uma senha, se desejar.</li>
+                    <li>Após gerar a chave, adicione a chave SSH ao seu agente SSH:
+                        <pre>
+<code>
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
+</code>
+                        </pre>
+                    </li>
+                </ul>
+            </li>
+            <li>Adicione a chave SSH ao seu GitHub:
+                <ul>
+                    <li>Copie a chave SSH para a área de transferência:
+                        <pre>
+<code>
+cat ~/.ssh/id_rsa.pub
+</code>
+                        </pre>
+                    </li>
+                    <li>No GitHub, vá para <strong>Settings</strong> (Configurações) > <strong>SSH and GPG keys</strong> > <strong>New SSH key</strong>.</li>
+                    <li>Cole a chave copiada e salve.</li>
+                </ul>
+            </li>
+            <li>Clone um repositório para testar:
+                <pre>
+<code>
+git clone git@github.com:usuario/nome-do-repositorio.git
+</code>
+                </pre>
+            </li>
+        </ol>
+    </section>
+</div>
+</body>
+</html>
