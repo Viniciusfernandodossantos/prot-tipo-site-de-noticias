@@ -1,32 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechVini News</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Adicionando os arquivos CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles2.css">
+    <!-- Incluindo o Bootstrap 5 para o exemplo da navbar offcanvas -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <header>
-        <div class="logo">TechGit News</div>
-        <button id="menu-toggle" aria-label="Menu Toggle">&#9776;</button>
-        <button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button>
-        <nav>
-            <ul class="menu">
-                <li><a href="ex.html">Início</a></li>
-                <li><a href="gitbasico.html">Historia</a></li>
-                <li>
-                    <a href="gt.html">Tutoriais</a></a>
-                    
-                </li>
-                <li><a href="CONTATO.HTML">Contato</a></li>
-                <li><a href="repo.html">Repositórios</a></li>
-                <li><a href="adv.html">senior</a></li>
-                
-            </ul>
-        </nav>
-    </header>
 
+<body>
+    <!-- Navegação principal -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TechVini News</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="ex.html">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gitbasico.html">História</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gt.html">Tutoriais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CONTATO.HTML">Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="repo.html">Repositórios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Senior</a>
+                </li>
+            </ul>
+            <form class="form-inline ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <button id="dark-mode-toggle" class="btn btn-outline-light ml-3" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </nav>
+<img src="img/Design sem nome (1).png" alt="" srcset="">
     <div class="hero-image">
         <img src="Saiba mais sobre Git hub.png" alt="Imagem de destaque">
     </div>
